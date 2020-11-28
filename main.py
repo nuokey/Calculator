@@ -32,7 +32,7 @@ def operation_pressed(operation):
 	operator = operation
 
 def is_oper_pressed():
-	exec("entry['text'] = str(int(number) " + operator + " int(entry['text']))")
+	exec("entry['text'] = str(float(number) " + operator + " float(entry['text']))")
 
 
 screen_width = 200
