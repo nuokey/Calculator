@@ -41,7 +41,7 @@ def is_oper_pressed():
 screen_width = 200
 screen_height = 300
 
-button_bg = 'grey'
+button_bg = 'black'
 button_fg = 'white'
 
 window = Tk()
@@ -50,7 +50,7 @@ window.resizable(False, False)
 window['bg'] = 'black'
 window.title("Calc")
 
-entry = Label(text = "", bg = 'grey', fg = 'white')
+entry = Label(text = "", bg = 'white', fg = 'black')
 entry.place(x = 0, y = 0, width = screen_width, height = 50)
 
 exponentiation = Button_grid(0, 0, '^2', exponentiation_pressed)
