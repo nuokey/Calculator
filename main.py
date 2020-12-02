@@ -32,10 +32,14 @@ def operation_pressed(operation):
 	operator = operation
 
 def is_oper_pressed():
-	if operator == '/' and float(entry['text']) == 0.0:
-		entry['text'] = "Division by zero"
-	else:
-		exec("entry['text'] = str(float(number) " + operator + " float(entry['text']))")
+	try:
+		if operator == '/' and float(entry['text']) == 0.0:
+			entry['text'] = "Division by zero"
+		else:
+			exec("entry['text'] = str(float(number) " + operator + " float(entry['text']))")
+	except Exception as E:
+		entry['text'] = 'Неправильный ввод. Ошибка '+str(E)
+
 
 
 screen_width = 200
