@@ -32,7 +32,10 @@ def operation_pressed(operation):
 	operator = operation
 
 def is_oper_pressed():
-	exec("entry['text'] = str(float(number) " + operator + " float(entry['text']))")
+	if operator == '/' and float(entry['text']) == 0.0:
+		entry['text'] = "Division by zero"
+	else:
+		exec("entry['text'] = str(float(number) " + operator + " float(entry['text']))")
 
 
 screen_width = 200
