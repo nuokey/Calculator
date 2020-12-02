@@ -37,8 +37,8 @@ def is_oper_pressed():
 			entry['text'] = "Division by zero"
 		else:
 			exec("entry['text'] = str(float(number) " + operator + " float(entry['text']))")
-	except Exception as E:
-		entry['text'] = 'Неправильный ввод. Ошибка '+str(E)
+	except:
+		entry['text'] = 'Неправильный ввод'
 
 
 
